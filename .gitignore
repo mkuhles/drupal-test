@@ -1,2 +1,43 @@
 .secret
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# --- Drupal: Composer-installed code ---
 /vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+
+# --- Drupal: runtime files ---
+/web/sites/*/files/
+/web/sites/*/settings.php
+/web/sites/*/settings.local.php
+/web/sites/*/settings.*.php
+/web/sites/*/services.yml
+/web/sites/*/services.*.yml
+
+# If you use additional private/temp dirs outside webroot
+/private/
+/tmp/
+
+# --- Logs / caches ---
+*.log
+/phpunit.xml
+/.phpunit.result.cache
+
+# --- Node (falls du Frontend buildest) ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# --- DDEV: keep config, ignore runtime data ---
+/.ddev/.db/
+/.ddev/.data/
+/.ddev/.downloads/
+/.ddev/.homeadditions/
+/.ddev/.ssh/
