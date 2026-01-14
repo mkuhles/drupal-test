@@ -1,0 +1,20 @@
+uuid: 17b68120-967a-4ce9-b697-798206888725
+langcode: en
+status: true
+dependencies:
+  theme:
+    - news_portal
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: news_portal_primary_admin_actions
+theme: news_portal
+region: highlighted
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

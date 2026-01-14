@@ -1,0 +1,28 @@
+uuid: 7196fdcf-c9ce-4b1c-9d1a-ba78e13ccd6f
+langcode: de
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - news_portal
+id: news_portal_sprachumschalter
+theme: news_portal
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: Sprachumschalter
+  label_display: visible
+  provider: language
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+      de: de

@@ -1,0 +1,19 @@
+uuid: 2d9897da-a8ac-4eb8-91a2-e4afedc68f9f
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: dev
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/split/dev
+module:
+  devel: 0
+  devel_generate: 0
+  webprofiler: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

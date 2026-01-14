@@ -1,0 +1,14 @@
+uuid: 6473ec3a-f28e-4bbe-9878-8171a27a0e1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content: {  }
+hidden:
+  description: true
+  langcode: true

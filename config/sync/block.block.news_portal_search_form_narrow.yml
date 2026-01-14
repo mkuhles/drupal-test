@@ -1,0 +1,23 @@
+uuid: d0b44e80-e58c-4627-b20c-b45ac643b530
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - news_portal
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: news_portal_search_form_narrow
+theme: news_portal
+region: primary_menu
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

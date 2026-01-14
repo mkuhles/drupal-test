@@ -1,0 +1,17 @@
+uuid: 27366809-4682-4bed-b876-02f8b21d82a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_card
+label: 'Article Card'
+effects:
+  017b5c73-d888-4c7d-a19e-da495c094566:
+    uuid: 017b5c73-d888-4c7d-a19e-da495c094566
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      crop_type: focal_point

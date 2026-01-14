@@ -1,0 +1,22 @@
+uuid: 77b4de02-08d3-4b57-8f75-cf333ca101a4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - news_portal
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: news_portal_primary_local_tasks
+theme: news_portal
+region: highlighted
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

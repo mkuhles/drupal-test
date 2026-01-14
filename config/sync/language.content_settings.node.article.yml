@@ -1,0 +1,16 @@
+uuid: cb51094b-2b3b-42c8-8d0b-c8f9ee0e3cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.article
+target_entity_type_id: node
+target_bundle: article
+default_langcode: site_default
+language_alterable: true
