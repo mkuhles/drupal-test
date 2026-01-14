@@ -1,0 +1,38 @@
+{#
+  Template for: node--article--card.html.twig
+  Applies when a node of type "article" is rendered in view mode "card".
+#}
+{% set layout = layout ? 'layout--' ~ layout|clean_class %}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    layout ? 'grid-full',
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {% if content.field_hero_image is not empty %}
+    <div class="card__media">
+      {{ content.field_hero_image }}
+    </div>
+  {% endif %}
+
+  <h2 class="node__title card__title">
+    <a href="{{ url }}">{{ label }}</a>
+  </h2>
+
+  {% if display_submitted %}
+    <div class="card__meta">
+      {{ author_name }} · {{ date }}
+    </div>
+  {% endif %}
+
+  {# Optional: show category/tags if you want #}
+  {# {{ content.field_category }} #}
+  {# {{ content.field_tags }} #}
+</article>

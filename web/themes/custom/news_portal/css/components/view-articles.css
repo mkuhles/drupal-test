@@ -1,0 +1,18 @@
+.view-articles { }
+
+.view-articles .view-content {
+  display: flex;
+  gap: 1em;
+  flex-flow: column wrap;
+  align-content: space-between;
+  max-height: 1800px; /* 3 rows of 440px height each */
+}
+
+.view-articles .view-content > * {
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.view-articles .view-content > *:nth-child(3n+1) { order: 1; } 
+.view-articles .view-content > *:nth-child(3n+2) { order: 2; } 
+.view-articles .view-content > *:nth-child(3n) { order: 3; } 

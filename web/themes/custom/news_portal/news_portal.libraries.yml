@@ -1,0 +1,5 @@
+global:
+  css:
+    theme:
+      css/components/view-articles.css: {}
+      css/components/card.css: {}

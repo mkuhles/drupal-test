@@ -1,0 +1,26 @@
+/* Styles only for the "card" view mode of Article nodes */
+.node--type-article.node--view-mode-card {
+  background-color: #f3f3ff;
+  border-radius: 12px;
+}
+
+.node--type-article.node--view-mode-card .card__title {
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  margin: 1rem 0 1rem 0;
+  padding: 0 16px;
+}
+
+.node--type-article.node--view-mode-card .card__meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding: 0 16px 1rem 16px;
+}
+
+.node--type-article.node--view-mode-card .card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* border-radius top */
+  border-radius: 12px 12px 0 0;
+}
