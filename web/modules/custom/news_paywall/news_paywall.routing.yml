@@ -1,0 +1,7 @@
+news_paywall.subscribe:
+  path: '/subscribe'
+  defaults:
+    _controller: '\Drupal\news_paywall\Controller\SubscribeController::redirect'
+    _title: 'Abo abschließen'
+  requirements:
+    _access: 'TRUE'

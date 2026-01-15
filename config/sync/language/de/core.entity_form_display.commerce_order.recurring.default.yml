@@ -1,0 +1,5 @@
+content:
+  order_items:
+    settings:
+      label_singular: Bestellartikel
+      label_plural: Bestellartikel

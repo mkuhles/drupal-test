@@ -17,6 +17,9 @@
     "require": {
         "composer/installers": "^2.3",
         "drupal/coffee": "^2.0",
+        "drupal/commerce": "^3.2",
+        "drupal/commerce_license": "^3.0",
+        "drupal/commerce_recurring": "^1.0@RC",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^11.3",
         "drupal/core-project-message": "^11.3",

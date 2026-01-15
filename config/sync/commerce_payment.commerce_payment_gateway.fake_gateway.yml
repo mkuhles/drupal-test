@@ -1,0 +1,18 @@
+uuid: 98602e3d-33e6-4639-821a-cd8e1766d265
+langcode: en
+status: true
+dependencies:
+  module:
+    - news_payment_fake
+id: fake_gateway
+label: 'Fake Gateway'
+weight: null
+plugin: news_fake
+configuration:
+  display_label: 'Fake Gateway'
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND

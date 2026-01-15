@@ -1,0 +1,51 @@
+label: Zahlungen
+display:
+  default:
+    display_title: Standard
+    display_options:
+      title: Zahlungen
+      fields:
+        amount__number:
+          label: Zahlung
+          separator: ', '
+        refunded_amount__number:
+          label: 'Zurückerstattet:'
+          separator: ', '
+        avs_response_code_label:
+          separator: ', '
+        avs_response_code:
+          label: AVS-Antwort-Code
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        payment_gateway:
+          label: Zahlungsschnittstelle
+          separator: ', '
+        authorized:
+          label: Autorisiert
+          separator: ', '
+        completed:
+          label: Abgeschlossen
+          separator: ', '
+        remote_id:
+          label: Remote-ID
+          separator: ', '
+        operations:
+          label: Aktionen
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      arguments:
+        order_id:
+          exception:
+            title: Alle
+  page_1:
+    display_title: Seite
+    display_options:
+      menu:
+        title: Zahlungen

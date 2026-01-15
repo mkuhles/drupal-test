@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_category
     - field.field.node.article.field_hero_image
+    - field.field.node.article.field_premium
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser
     - node.type.article
@@ -28,6 +29,7 @@ hidden:
   comment: true
   field_category: true
   field_hero_image: true
+  field_premium: true
   field_tags: true
   field_teaser: true
   langcode: true

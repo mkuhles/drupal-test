@@ -1,0 +1,56 @@
+label: 'Abonnements für Benutzerbeiträge'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      pager:
+        options:
+          tags:
+            previous: '‹ Zurück'
+            next: 'Weiter ›'
+            first: '« Anfang'
+            last: 'Ende »'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      fields:
+        subscription_id:
+          separator: ', '
+        title:
+          label: Titel
+          separator: ', '
+        billing_schedule:
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        starts:
+          label: Beginnt
+          separator: ', '
+        ends:
+          label: Endet
+          separator: ', '
+        operations:
+          label: Aktionen
+      title: Abonnements
+      empty:
+        area:
+          content:
+            value: 'Sie haben noch keine Abonnements.'
+      arguments:
+        uid:
+          exception:
+            title: Alle
+  page_1:
+    display_title: 'Abonnements für Benutzerbeiträge'
+    display_options:
+      menu:
+        title: Abonnements

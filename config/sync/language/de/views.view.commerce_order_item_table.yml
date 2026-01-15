@@ -1,0 +1,29 @@
+label: Bestellartikel
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      fields:
+        title:
+          label: Titel
+          separator: ', '
+        unit_price__number:
+          label: Einzelpreis
+          separator: ', '
+        quantity:
+          label: Anzahl
+          separator: ', '
+        total_price__number:
+          label: Gesamtsumme
+          separator: ', '
+      arguments:
+        order_item_id:
+          exception:
+            title: Alle

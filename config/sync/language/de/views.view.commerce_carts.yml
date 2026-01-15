@@ -1,0 +1,49 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+          tags:
+            previous: '‹ vorherige Seite'
+            next: 'nächste Seite ›'
+            first: '« erste Seite'
+            last: 'letzte Seite »'
+      fields:
+        type:
+          label: Typ
+          separator: ', '
+        store_id:
+          label: Shop
+          separator: ', '
+        uid:
+          label: Kunde
+          separator: ', '
+        mail:
+          label: E-Mail
+          separator: ', '
+        total_price__number:
+          label: Gesamt
+          separator: ', '
+        changed:
+          label: Aktualisiert
+          separator: ', '
+        operations:
+          label: Aktionen
+      filters:
+        type:
+          expose:
+            label: Typ
+  page_1:
+    display_title: Seite

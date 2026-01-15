@@ -1,0 +1,15 @@
+.news-paywall__box {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+.news-paywall__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.news-paywall__login a {
+  text-decoration: underline;
+}

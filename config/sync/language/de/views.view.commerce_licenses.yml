@@ -1,0 +1,68 @@
+label: Lizenzen
+display:
+  default:
+    display_title: Master
+    display_options:
+      title: Lizenzen
+      fields:
+        license_id:
+          label: ID
+          separator: ', '
+        label:
+          label: Beschriftung
+        type:
+          label: Lizenztyp
+          separator: ', '
+        uid:
+          label: Eigentümer
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        granted:
+          label: gewährt
+          separator: ', '
+        expires:
+          label: 'Läuft ab'
+          separator: ', '
+        changed:
+          label: Aktualisiert
+          separator: ', '
+        operations:
+          label: Aktionslinks
+        name:
+          label: Name
+          separator: ', '
+        mail:
+          label: E-Mail
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« Anfang'
+            last: 'Ende »'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      filters:
+        type:
+          expose:
+            label: Lizenztyp
+        combine:
+          expose:
+            label: 'Name oder E-Mail-Adresse enthält'
+        state:
+          expose:
+            label: Status
+  page_1:
+    display_title: Seite

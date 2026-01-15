@@ -1,0 +1,63 @@
+label: Abonnements
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Anfang'
+            last: 'Ende »'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      fields:
+        subscription_id:
+          label: ID
+          separator: ', '
+        title:
+          label: Titel
+          separator: ', '
+        type:
+          label: Typ
+          separator: ', '
+        billing_schedule:
+          separator: ', '
+        uid:
+          label: Kunde
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        starts:
+          label: Beginnt
+          separator: ', '
+        ends:
+          label: Endet
+          separator: ', '
+        operations:
+          label: Aktionen
+      filters:
+        uid:
+          expose:
+            label: Kunde
+        state:
+          expose:
+            label: Status
+      title: Abonnements
+      empty:
+        area:
+          content:
+            value: 'Keine Abonnements verfügbar.'
+  page_1:
+    display_title: Seite

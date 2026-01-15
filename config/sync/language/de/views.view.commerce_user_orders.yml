@@ -1,0 +1,47 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      pager:
+        options:
+          tags:
+            previous: '‹ Zurück'
+            next: 'Weiter ›'
+            first: '« Anfang'
+            last: 'Ende »'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      fields:
+        order_id:
+          label: ID
+          separator: ', '
+        order_number:
+          label: Bestellnummer
+          separator: ', '
+        placed:
+          label: Datum
+          separator: ', '
+        total_price__number:
+          label: Gesamt
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+      title: Bestellungen
+      arguments:
+        uid:
+          exception:
+            title: Alle
+  order_page:
+    display_options:
+      menu:
+        title: Bestellungen

@@ -1,0 +1,18 @@
+services:
+  news_paywall.entitlement_checker:
+    class: Drupal\news_paywall\Service\EntitlementChecker
+    arguments: ['@entity_type.manager', '@current_user']
+
+  news_paywall.payment_subscriber:
+    class: Drupal\news_paywall\EventSubscriber\PaymentSubscriber
+    arguments: ['@entity_type.manager', '@current_user']
+    tags:
+      - { name: event_subscriber }
+
+  news_paywall.field_access:
+    class: Drupal\news_paywall\Access\PaywallFieldAccessChecker
+    arguments: ['@news_paywall.entitlement_checker']
+
+  news_paywall.cta_builder:
+    class: Drupal\news_paywall\Render\PaywallCtaBuilder
+    arguments: ['@news_paywall.entitlement_checker', '@request_stack']

@@ -1,0 +1,34 @@
+uuid: c50ccbee-9a73-4fc0-8880-ff5ff09c6780
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - language
+id: commerce_produkte
+label: 'Commerce Produkte'
+type: 'canonical_entities:commerce_product'
+pattern: '/product/[commerce_product:title]'
+selection_criteria:
+  c6f33de4-3cb3-4b75-84ce-c9e8c7352a82:
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    uuid: c6f33de4-3cb3-4b75-84ce-c9e8c7352a82
+    context_mapping:
+      commerce_product: commerce_product
+    bundles:
+      default: default
+  ced259c1-ce59-4124-8791-24c9ff9fb068:
+    id: language
+    negate: false
+    uuid: ced259c1-ce59-4124-8791-24c9ff9fb068
+    context_mapping:
+      language: 'commerce_product:langcode:language'
+    langcodes:
+      en: en
+      de: de
+selection_logic: and
+weight: 0
+relationships:
+  'commerce_product:langcode:language':
+    label: Language

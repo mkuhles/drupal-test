@@ -1,0 +1,29 @@
+label: Profile
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      empty:
+        area:
+          content:
+            value: 'Es gibt noch keine Profile.'
+      arguments:
+        uid:
+          exception:
+            title: Alle
+        type:
+          exception:
+            title: Alle
+        status:
+          exception:
+            title: Alle
+      title: Profile
+  user_page:
+    display_title: Benutzerseite

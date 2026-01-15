@@ -1,0 +1,16 @@
+uuid: 8714d8d7-fa9c-4cbb-8b44-edb4a40940f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_license
+  enforced:
+    module:
+      - commerce_license
+_core:
+  default_config_hash: 2lPjYv-XlqWZYkOBU9fKZOKzUK--fH0PqL2BD9TJ1vA
+id: commerce_license_delete_action
+label: 'Delete license'
+type: commerce_license
+plugin: 'entity:delete_action:commerce_license'
+configuration: {  }

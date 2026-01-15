@@ -1,0 +1,4 @@
+access premium content:
+  title: 'Access premium content'
+  description: 'View premium articles and protected fields.'
+  restrict: true

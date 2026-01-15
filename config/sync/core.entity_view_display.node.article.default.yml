@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_category
     - field.field.node.article.field_hero_image
+    - field.field.node.article.field_premium
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser
     - node.type.article
@@ -47,6 +48,16 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_premium:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_tags:
     type: entity_reference_entity_view

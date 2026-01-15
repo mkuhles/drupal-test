@@ -1,0 +1,9 @@
+name: 'News Paywall'
+type: module
+description: 'Provides simple premium content access control and entitlement integration for commerce payments.'
+core_version_requirement: ^11 || ^10
+package: Custom
+dependencies:
+  - node
+  - user
+  - drupal:commerce_payment

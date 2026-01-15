@@ -1,0 +1,7 @@
+name: 'News Payment Fake'
+type: module
+description: 'Provides a simple on-site fake payment gateway for Drupal Commerce to aid development and testing.'
+core_version_requirement: ^11 || ^10
+package: Custom
+dependencies:
+  - drupal:commerce_payment

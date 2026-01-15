@@ -1,0 +1,48 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        order_id:
+          label: ID
+          separator: ', '
+        uid:
+          label: Benutzer-ID
+          separator: ', '
+        order_number:
+          label: Bestellnummer
+          separator: ', '
+        completed:
+          label: Bezahlungsdatum
+          separator: ', '
+        payment_method:
+          label: Zahlungsmethode
+          separator: ', '
+        billing_period:
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        total_price__number:
+          label: Bestellsumme
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      arguments:
+        subscription_id:
+          exception:
+            title: Alle

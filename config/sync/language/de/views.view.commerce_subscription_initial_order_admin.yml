@@ -1,0 +1,37 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        order_id:
+          label: ID
+          separator: ', '
+        uid:
+          label: Benutzer-ID
+          separator: ', '
+        order_number:
+          label: Bestellnummer
+          separator: ', '
+        placed:
+          label: Platziert
+          separator: ', '
+        payment_method:
+          label: Zahlungsmethode
+          separator: ', '
+        state:
+          label: Status
+          separator: ', '
+        total_price__number:
+          label: Bestellsumme
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      arguments:
+        subscription_id:
+          exception:
+            title: Alle

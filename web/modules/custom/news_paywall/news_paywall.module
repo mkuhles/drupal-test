@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * News Paywall module hooks.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_entity_field_access().
+ *
+ * Delegates field access checks to the PaywallFieldAccessChecker service.
+ */
+function news_paywall_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, ?FieldItemListInterface $items = NULL) {
+  return \Drupal::service('news_paywall.field_access')->check($operation, $field_definition, $account, $items);
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ *
+ * Adds the paywall CTA box to premium articles when appropriate.
+ */
+function news_paywall_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  if (!$entity instanceof NodeInterface) {
+    return;
+  }
+  $view_mode = $build['#view_mode'] ?? '';
+  $cta = \Drupal::service('news_paywall.cta_builder');
+  if ($cta->applies($entity, $view_mode)) {
+    $build['news_paywall_box'] = $cta->build($entity);
+    $build['news_paywall_box']['#weight'] = 5;
+  }
+}
