@@ -1,0 +1,7 @@
+news_paywall.settings:
+  type: config_object
+  label: 'News Paywall settings'
+  mapping:
+    gateway_id:
+      type: string
+      label: 'Payment gateway ID for auto-payments'

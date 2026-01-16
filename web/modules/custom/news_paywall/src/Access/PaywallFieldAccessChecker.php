@@ -52,19 +52,16 @@ final class PaywallFieldAccessChecker {
       return AccessResult::neutral();
     }
 
-    // Owner can see everything.
-    if ((int) $entity->getOwnerId() === (int) $account->id()) {
-      return AccessResult::neutral();
-    }
-
     // später konfigurierbar (Option B)
     $protected_fields = ['body'];
     if (!in_array($field_definition->getName(), $protected_fields, TRUE)) {
       return AccessResult::neutral();
     }
 
-    if ($this->entitlementChecker->currentUserHasPremiumAccess($account)) {
-      return AccessResult::neutral();
+    if ($this->entitlementChecker->hasPremiumAccess($account)) {
+      return AccessResult::allowed()
+        ->cachePerPermissions()
+        ->addCacheableDependency($entity);
     }
 
     return AccessResult::forbidden()

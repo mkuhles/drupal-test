@@ -1,0 +1,13 @@
+uuid: null
+langcode: en
+status: true
+id: news_paywall_manual
+label: 'News Paywall Manual'
+plugin: manual
+configuration:
+  display_label: 'Manual (Paywall)'
+  mode: n/a
+  payment_method_types: {  }
+  collect_billing_information: false
+conditions: {  }
+conditionOperator: AND

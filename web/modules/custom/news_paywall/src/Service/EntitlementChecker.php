@@ -42,6 +42,16 @@ class EntitlementChecker {
   }
 
   /**
+   * Determines if the current user has access to premium content.
+   *
+   * @return bool
+   *   TRUE if the current user has premium access, FALSE otherwise.
+   */
+  public function currentUserHasPremiumAccess() {
+    return $this->hasPremiumAccess($this->currentUser);
+  }
+
+  /**
    * Determines if a user has access to premium content.
    *
    * This method centralises the business rules for paywall access. Right now
@@ -55,18 +65,8 @@ class EntitlementChecker {
    * @return bool
    *   TRUE if the user has premium access, FALSE otherwise.
    */
-  public function currentUserHasPremiumAccess(?AccountProxyInterface $account = NULL) {
-    $account = $account ?: $this->currentUser;
-
-    // Users with the 'access premium content' permission always have access.
-    if ($account->hasPermission('access premium content')) {
-      return TRUE;
-    }
-
-    // Check for commerce licenses or entitlements here in the future. For
-    // example, you might load all active licenses for the user and verify
-    // whether any of them entitle the user to this content.
-    return FALSE;
+  public function hasPremiumAccess(AccountProxyInterface $account): bool {
+    return $account->hasPermission('access premium content');
   }
 
 }
