@@ -1,6 +1,0 @@
-services:
-  news_payment_fake.order_subscriber:
-    class: Drupal\news_payment_fake\EventSubscriber\OrderSubscriber
-    arguments: ['@entity_type.manager']
-    tags:
-      - { name: event_subscriber }
