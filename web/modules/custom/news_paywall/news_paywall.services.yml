@@ -23,5 +23,6 @@ services:
 
   news_paywall.order_paid_subscriber:
     class: Drupal\news_paywall\EventSubscriber\OrderPaidSubscriber
+    arguments: ['@config.factory', '@logger.channel.news_paywall']
     tags:
       - { name: event_subscriber }

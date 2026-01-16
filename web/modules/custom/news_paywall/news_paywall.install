@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Install file for the News Paywall module.
+ */
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function news_paywall_install(): void {
+  $role_id = 'news_paywall_subscriber';
+
+  $role = Role::load($role_id);
+  if (!$role) {
+    $role = Role::create([
+      'id' => $role_id,
+      'label' => 'News Paywall Subscriber',
+    ]);
+  }
+
+  $role->grantPermission('access premium content');
+  $role->save();
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function news_paywall_update_10001(): void {
+  // Role anlegen + Permission setzen.
+  $role_id = 'news_paywall_subscriber';
+
+  $role = Role::load($role_id);
+  if (!$role) {
+    $role = Role::create([
+      'id' => $role_id,
+      'label' => 'News Paywall Subscriber',
+    ]);
+  }
+
+  $role->grantPermission('access premium content');
+  $role->save();
+}

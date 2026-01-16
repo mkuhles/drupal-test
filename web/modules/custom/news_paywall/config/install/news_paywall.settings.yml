@@ -1,1 +1,2 @@
 gateway_id: 'news_paywall_manual'
+grant_role_id: 'news_paywall_subscriber'

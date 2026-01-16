@@ -5,3 +5,6 @@ news_paywall.settings:
     gateway_id:
       type: string
       label: 'Payment gateway ID for auto-payments'
+    grant_role_id:
+      type: string
+      label: 'Role to grant after payment'
