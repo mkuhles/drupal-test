@@ -2,7 +2,7 @@
 
 namespace Drupal\news_paywall\Service;
 
-use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
@@ -36,7 +36,7 @@ class EntitlementChecker {
    * @param \Drupal\Core\Session\AccountProxyInterface $currentUser
    *   The current user.
    */
-  public function __construct(EntityTypeManagerInterface $entityTypeManager, AccountProxyInterface $currentUser) {
+  public function __construct(EntityTypeManagerInterface $entityTypeManager, AccountInterface $currentUser) {
     $this->entityTypeManager = $entityTypeManager;
     $this->currentUser = $currentUser;
   }
@@ -65,7 +65,7 @@ class EntitlementChecker {
    * @return bool
    *   TRUE if the user has premium access, FALSE otherwise.
    */
-  public function hasPremiumAccess(AccountProxyInterface $account): bool {
+  public function hasPremiumAccess(AccountInterface $account): bool {
     return $account->hasPermission('access premium content');
   }
 
