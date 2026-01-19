@@ -1,0 +1,22 @@
+uuid: 40615962-d98e-47cd-a947-53a00f10c32d
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - news_portal
+id: news_portal_cart
+theme: news_portal
+region: primary_menu
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
+  show_if_empty: true
+visibility: {  }

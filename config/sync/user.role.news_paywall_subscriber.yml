@@ -1,0 +1,12 @@
+uuid: 5e2bf72f-e34d-4f2c-96d8-025a7dfe7b39
+langcode: en
+status: true
+dependencies:
+  module:
+    - news_paywall
+id: news_paywall_subscriber
+label: 'News Paywall Subscriber'
+weight: 5
+is_admin: false
+permissions:
+  - 'access premium content'

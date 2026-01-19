@@ -1,0 +1,21 @@
+uuid: a7fe0239-419c-47fc-ae3a-affe0b0dd870
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TFL6TbrWC65ocSn76u8Pzl_3XYMH30PCCwcOxwnB60g
+id: news_paywall_manual
+label: 'News Paywall Manual'
+weight: null
+plugin: manual
+configuration:
+  instructions:
+    value: ''
+    format: plain_text
+  display_label: 'Manual (Paywall)'
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: false
+conditions: {  }
+conditionOperator: AND

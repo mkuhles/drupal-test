@@ -1,0 +1,14 @@
+uuid: e91d0abb-386a-4026-8953-24ca5dbce3c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.news_paywall_subscriber
+  module:
+    - user
+id: user_remove_role_action.news_paywall_subscriber
+label: 'Remove the News Paywall Subscriber role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: news_paywall_subscriber

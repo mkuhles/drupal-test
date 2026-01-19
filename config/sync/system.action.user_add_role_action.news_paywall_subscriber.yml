@@ -1,0 +1,14 @@
+uuid: 3b43e6e6-2a9a-4491-8218-ab2241372c1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.news_paywall_subscriber
+  module:
+    - user
+id: user_add_role_action.news_paywall_subscriber
+label: 'Add the News Paywall Subscriber role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: news_paywall_subscriber

@@ -1,12 +1,9 @@
 uuid: 0d599deb-828f-4c72-beb5-aef7c4667128
 langcode: en
 status: true
-dependencies:
-  module:
-    - news_paywall
+dependencies: {  }
 id: subscriber
 label: Subscriber
 weight: 4
 is_admin: false
-permissions:
-  - 'access premium content'
+permissions: {  }
